@@ -1,0 +1,47 @@
+{% extends "cordtemp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addexpert#about">
+  <table width="702" class="table table-striped">
+    <tr>
+      <td width="42">SLNO</td>
+      <td width="59">Firstname</td>
+      <td width="58">Lastname</td>
+      <td width="74">DateOfBirth</td>
+      <td width="45">Gender</td>
+      <td width="33">Place</td>
+      <td width="64">PostOffice</td>
+      <td width="19">Pin</td>
+      <td width="54">Phone Number </td>
+      <td width="33">Email</td>
+      <td width="81">Qualifications</td>
+      <td width="22">&nbsp;</td>
+      <td width="36">&nbsp;</td>
+    </tr>
+      {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{val[i][2]}}</td>
+      <td>{{val[i][3]}}</td>
+      <td>{{val[i][4]}}</td>
+      <td>{{val[i][5]}}</td>
+      <td>{{val[i][6]}}</td>
+      <td>{{val[i][7]}}</td>
+      <td>{{val[i][8]}}</td>
+      <td>{{val[i][9]}}</td>
+      <td>{{val[i][10]}}</td>
+      <td>{{val[i][11]}}</td>
+      <td><a href="{{url_for('editexpert',id=val[i][0])}}#about" class="btn btn-success">edit</a></td>
+      <td><a href="{{url_for('deleexpert',id=val[i][0])}}#about" class="btn btn-danger">delete</a></td>
+    </tr>
+      {% endfor %}
+    <tr>
+      <td colspan="13"><div align="center"><a href="#"></a><a href="#">
+          <input type="submit" name="Submit"  class="btn btn-primary" value="ADD" />
+      </a></div></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

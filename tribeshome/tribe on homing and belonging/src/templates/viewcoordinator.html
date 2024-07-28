@@ -1,0 +1,47 @@
+{% extends "counciltemp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addcord#about">
+  <table width="702" class="table table-striped" id="ab">
+    <tr>
+      <th width="42">SLNO</th>
+      <th width="59">Firstname</th>
+      <th width="58">Lastname</th>
+      <th width="74">DateOfBirth</th>
+      <th width="45">Gender</th>
+      <th width="33">Place</th>
+      <th width="64">PostOffice</th>
+      <th width="19">Pin</th>
+      <th width="54">Phone Number </th>
+      <th width="33">Email</th>
+      <th width="81">Qualifications</th>
+      <th width="22">&nbsp;</th>
+      <th width="36">&nbsp;</th>
+    </tr>
+      {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{val[i][2]}}</td>
+      <td>{{val[i][3]}}</td>
+      <td>{{val[i][4]}}</td>
+      <td>{{val[i][5]}}</td>
+      <td>{{val[i][6]}}</td>
+      <td>{{val[i][7]}}</td>
+      <td>{{val[i][8]}}</td>
+      <td>{{val[i][9]}}</td>
+      <td>{{val[i][10]}}</td>
+      <td>{{val[i][11]}}</td>
+      <td><a href="{{url_for('editcoord',id=val[i][0])}}#about" class="btn btn-success">edit</a></td>
+      <td><a href="{{url_for('delecord',id=val[i][0])}}#about" class="btn btn-danger">delete</a></td>
+    </tr>
+      {% endfor %}
+    <tr>
+      <td colspan="13"><div align="center"><a href="#"></a><a href="#">
+          <input type="submit" name="Submit" value="ADD" />
+      </a></div></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

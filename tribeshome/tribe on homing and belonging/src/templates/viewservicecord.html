@@ -1,0 +1,35 @@
+{% extends "cordtemp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped" id="ab">
+    <tr>
+      <th>SLNO</th>
+      <th>Date</th>
+      <th>Tribe Area</th>
+      <th>Title</th>
+      <th>Request</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+       {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{val[i][2]}}</td>
+      <td>{{val[i][3]}}</td>
+      <td>{{val[i][4]}}</td>
+      <td>{{val[i][5]}}</td>
+      {% if val[i][6]=="pending"  %}
+      <td><a href="{{url_for('editsercord',id=val[i][0])}}#about" class="btn btn-success">edit</a></td>
+      <td><a href="{{url_for('delereqcord',id=val[i][0])}}#about" class="btn btn-danger">delete</a></td>
+      {% else %}
+      <td >{{val[i][6]}}</td>
+      <td ><a href="/static/upload/{{val[i][6]}}" download class="btn btn-primary">download</a></td>
+      {% endif %}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

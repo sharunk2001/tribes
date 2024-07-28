@@ -1,0 +1,59 @@
+{% extends "cordtemp2.html"%}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped" id="ab">
+    <tr>
+      <th>Firstname</th>
+      <td><input type="text" name="textfield" value="{{val[2]}}" readonly/></td>
+    </tr>
+    <tr>
+      <th>Lastname</th>
+      <td><input type="text" name="textfield2" value="{{val[3]}}"readonly/></td>
+    </tr>
+    <tr>
+      <th>DateOfBirth</th>
+      <td><input type="date" name="textfield3" value="{{val[4]}}"readonly/></td>
+    </tr>
+    <tr>
+      <th>Gender</th>
+      <td><input name="radiobutton" type="radio" value="male" {% if val [5]=="male" %}checked {% endif %}/>
+        male
+        <input name="radiobutton" type="radio" value="female" {% if val [5]=="female" %}checked {% endif %}/>
+        female</td>
+    </tr>
+    <tr>
+      <th>Place</td>
+      <td><input type="text" name="textfield5" value="{{val[6]}}"readonly/></td>
+    </tr>
+    <tr>
+      <th>PostOffice</th>
+      <td><input type="text" name="textfield11" value="{{val[7]}}"readonly/></td>
+    </tr>
+    <tr>
+      <th>Pin</th>
+      <td><input type="text" name="textfield4" value="{{val[8]}}"readonly/></td>
+    </tr>
+    <tr>
+      <th>Phone Number </th>
+      <td><input type="text" name="textfield6" value="{{val[9]}}"readonly/></td>
+    </tr>
+    <tr>
+      <th>Email</th>
+      <td><input type="text" name="textfield7" value="{{val[10]}}"readonly/></td>
+    </tr>
+    <tr>
+      <th>Qualifications</th>
+       <td><input type="checkbox" name="checkbox" value="SSLC" {% if 'SSLC' in val[11] %} checked {% endif %}/>
+      SSLC
+        <input type="checkbox" name="checkbox" value="PLUSTWO" {% if 'PLUSTWO' in val[11] %} checked {% endif %}/>
+      PLUSTWO
+      <input type="checkbox" name="checkbox" value="UG" {% if 'UG' in val[11] %} checked {% endif %}/>
+      UG
+      <input type="checkbox" name="checkbox" value="PG" {% if 'PG' in val[11] %} checked {% endif %}/>
+      PG</td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

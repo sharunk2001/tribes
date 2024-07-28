@@ -1,0 +1,192 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />-->
+<!--<title>Untitled Document</title>-->
+<!--</head>-->
+
+<!--<body>-->
+<!--<form id="form1" name="form1" method="post" action="/vreg">-->
+  <!--<table width="200" class="table table-striped">-->
+    <!--<tr>-->
+      <!--<td>Firstname</td>-->
+      <!--<td><input type="text" name="textfield" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Lastname</td>-->
+      <!--<td><input type="text" name="textfield2" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>DateOfBirth</td>-->
+      <!--<td><input type="date" name="textfield3" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Gender</td>-->
+      <!--<td><input name="radiobutton" type="radio" value="male" />-->
+        <!--male-->
+        <!--<input name="radiobutton" type="radio" value="female" />-->
+        <!--female</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Place</td>-->
+      <!--<td><input type="text" name="textfield5" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>PostOffice</td>-->
+      <!--<td><input type="text" name="textfield11" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Pin</td>-->
+      <!--<td><input type="text" name="textfield4" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Phone Number </td>-->
+      <!--<td><input type="text" name="textfield6" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Email</td>-->
+      <!--<td><input type="text" name="textfield7" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Qualifications</td>-->
+       <!--<td><input type="checkbox" name="checkbox" value="SSLC" />-->
+      <!--SSLC-->
+        <!--<input type="checkbox" name="checkbox" value="PLUSTWO" />-->
+      <!--PLUSTWO-->
+      <!--<input type="checkbox" name="checkbox" value="UG" />-->
+      <!--UG-->
+      <!--<input type="checkbox" name="checkbox" value="PG" />-->
+      <!--PG</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Username</td>-->
+      <!--<td><input type="text" name="textfield9" /></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<td>Password</td>-->
+      <!--<td><input type="text" name="textfield10" /></td>-->
+    <!--</tr>-->
+    <!---->
+    <!--<tr>-->
+      <!--<td>&nbsp;</td>-->
+      <!--<td><input type="submit" name="Submit" value="REGISTER" /></td>-->
+    <!--</tr>-->
+  <!--</table>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <!-- Title Page-->
+    <title>Au Register Forms by Colorlib</title>
+
+    <!-- Icons font CSS-->
+    <link href="/static/registration/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="/static/registration/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="/static/registration/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="/static/registration/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="/static/registration/css/main.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+        <div class="wrapper wrapper--w780">
+            <div class="card card-3">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title">Registration Info</h2>
+                    <form method="POST" id="form1" name="form1" method="post" action="/vreg">
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Firstname" name="textfield" required pattern="[A-Z a-z.]{3,25}">
+                        </div>
+                         <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Secondname" name="textfield2" required pattern="[A-Z a-z.]{3,25}">
+                        </div>
+
+                        <div class="input-group">
+                            <input class="input--style-3 " type="date" placeholder="Secondname" name="textfield3" required pattern="[A-Z a-z.]{3,25}">
+                            <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
+                        </div>
+                        <div class="input-group">
+                            <div class="rs-select2 js-select-simple select--no-search">
+                                <select name="radiobutton"  required>
+                                    <option disabled="disabled" selected="selected">Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                                <div class="select-dropdown"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Place" name="textfield5" required pattern="[A-Z a-z.]{3,25}">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Postoffice" name="textfield11" required pattern="[A-Z a-z.]{3,25}">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Pin" name="textfield4" required pattern="[0-9]{6}">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="PhoneNumber" name="textfield6" required pattern="[6789][0-9]{9}">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="email" placeholder="Email" name="textfield7" required>
+                        </div>
+                        <div class="input-group">
+                          <!--<table><tr><td>-->
+                            <input type="checkbox" name="checkbox" value="SSLC" />
+                          <!--</td><td>-->
+                          <p style="color:#ffffff">SSLC</p>
+                        <!--</td></tr>-->
+                            <tr><td><input type="checkbox" name="checkbox" value="PLUSTWO" /></td><td><p style="color:#ffffff">PLUSTWO</p></td></tr>
+                            <tr><td><input type="checkbox" name="checkbox" value="UG" /></td><td><p style="color:#ffffff">UG</p></td></tr>
+                            <tr><td><input type="checkbox" name="checkbox" value="PG" /></td><td><p style="color:#ffffff">PG</p></td></tr>
+                          </table>
+
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="text" placeholder="Username" name="textfield9" required pattern="[A-Z a-z.]{3,25}">
+                        </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="password" placeholder="Password" name="textfield10" required >
+                        </div>
+
+                        <div class="p-t-10">
+                            <input type="submit"class="btn btn--pill btn--green" >
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="/static/registration/vendor/jquery/jquery.min.js"></script>
+    <!-- Vendor JS-->
+    <script src="/static/registration/vendor/select2/select2.min.js"></script>
+    <script src="/static/registration/vendor/datepicker/moment.min.js"></script>
+    <script src="/static/registration/vendor/datepicker/daterangepicker.js"></script>
+
+    <!-- Main JS-->
+    <script src="/static/registration/js/global.js"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

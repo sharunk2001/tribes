@@ -1,0 +1,41 @@
+{% extends "cordtemp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addfamilycord2#about">
+  <table width="270" class="table table-striped" id="ab">
+    <tr>
+      <td width="79">Member Name </td>
+      <td width="175"><input type="text" name="textfield"  required pattern="[A-Z a-z.]{3,25}"/></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td><input name="radiobutton" type="radio" value="male" checked />
+      male 
+        <input name="radiobutton" type="radio" value="female" />
+      female </td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td><input type="number" name="textfield2" required pattern="[0-9]{3}"/></td>
+    </tr>
+    <tr>
+      <td>Relation with Head </td>
+      <td><input type="text" name="textfield3" required pattern="[A-Z a-z.]{3,25}"/></td>
+    </tr>
+    <tr>
+      <td>Position</td>
+      <td><input type="text" name="textfield4" required pattern="[A-Z a-z.]{3,25}" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        
+        <div align="center">
+          <input type="submit" name="Submit" value="FINISH"  formnovalidate class="btn btn-primary" />
+          <input type="submit" name="Submit" value="ADD" class="btn btn-primary"/>
+          </div></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

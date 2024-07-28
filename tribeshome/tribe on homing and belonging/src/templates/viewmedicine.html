@@ -1,0 +1,40 @@
+{% extends "admin_temp2.html"%}
+{% block body %}
+
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped">
+    <tr>
+      <td>SLNO</td>
+      <td>Type</td>
+      <td>Medicine Name</td>
+      <td>Dosage</td>
+      <td>Quantity</td>
+      <td>Expiry Date</td>
+      <td>Donor Name </td>
+      <td>Phone Number</td>
+      <td>Email</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+      {% for i in range(0,val|length) %}
+    <tr>
+      <td>&nbsp;{{i+1}}</td>
+      <td>{{val[i][1]}}</td>
+      <td>&nbsp;{{val[i][2]}}</td>
+      <td>&nbsp;{{val[i][3]}}</td>
+      <td>{{val[i][4]}}</td>
+      <td>{{val[i][5]}}</td>
+      <td>&nbsp;{{val[i][6]}}</td>
+      <td>&nbsp;{{val[i][7]}}</td>
+      <td>&nbsp;{{val[i][8]}}</td>
+      <td><a href="{{url_for('editmedicine',id=val[i][0])}}#about" class="btn btn-success">edit</a></td>
+      <td><a href="{{url_for('delemedicine',id=val[i][0])}}#about" class="btn btn-danger">delete</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}
+

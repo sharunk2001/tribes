@@ -1,0 +1,33 @@
+{% extends "admin_temp2.html"%}
+{% block body %}
+
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped" id="ab">
+    <tr>
+      <th>SLNO</th>
+      <th>Type</th>
+      <th>Tribearea</th>
+      <th>Date</th>
+      <th>Description</th>
+      <th>Report</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+     {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>&nbsp;{{val[i][1]}}</td>
+      <td>{{val[i][2]}}</td>
+      <td>{{val[i][3]}}</td>
+      <td>&nbsp;{{val[i][4]}}</td>
+      <td>&nbsp;<a href="../static/upload/{{val[i][5]}}">Report</a></td>
+      <td><a href="{{url_for('editdonationreport',id=val[i][0])}}#about" class="btn btn-success">edit</a></td>
+      <td><a href="{{url_for('deledonationreport',id=val[i][0])}}#about" class="btn btn-danger">delete</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

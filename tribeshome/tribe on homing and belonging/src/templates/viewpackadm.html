@@ -1,0 +1,25 @@
+{% extends "admin_temp2.html"%}
+{% block body %}
+
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="413" class="table table-striped">
+    <tr>
+      <td width="96">SLNO</td>
+      <td width="17">Package Name </td>
+      <td width="17">Description</td>
+      <td width="17">&nbsp;</td>
+      <td width="232">&nbsp;</td>
+    </tr>
+       {% for i in range(0,val|length) %}
+    <tr>
+      <td>&nbsp;{{i+1}}</td>
+      <td>&nbsp;{{val[i][1]}}</td>
+      <td>&nbsp;{{val[i][2]}}</td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

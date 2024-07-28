@@ -1,0 +1,51 @@
+{% extends "counciltemp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/viewreportcouncilor_post#about">
+  <table width="531" class="table table-striped" id="ab">
+    <tr><td>Choose Cordinator</td><td colspan="3">
+      <select name="se" id="sel" class="form-control">
+        <option value="--select--">--select--</option>
+      {% for i in val2 %}
+      <option value="{{i[0]}}">{{i[1]}}</option>
+     {% endfor %}
+    </select></td><td ><input type="submit" value="Filter" onclick="return aa()" class="btn btn-primary">
+    </td>
+
+    </tr>
+    <tr>
+      <th width="45">SLNO</th>
+      <th width="110">Name</th>
+      <th width="60">Date</th>
+      <th width="67">Tribe Area </th>
+      <th width="119">Title</th>
+      <th width="90">report</th>
+    </tr>
+    {% for i in range(0,val|length) %}
+    <tr>
+      <td>&nbsp;{{i+1}}</td>
+      <td>&nbsp;{{val[i][0]}} {{val[i][1]}} ( {{val[i][2]}})</td>
+      <td>&nbsp;{{val[i][5]}}</td>
+      <td>&nbsp;{{val[i][6]}}</td>
+      <td>&nbsp;{{val[i][7]}}</td>
+      <td>&nbsp;{{val[i][8]}}<a href="../static/upload/{{val[i][8]}}">download</a></td>
+
+    </tr>
+     {% endfor %}
+  </table>
+</form>
+</body>
+<!--<script>-->
+<!--  function aa() {-->
+<!--      x=document.getElementById("sel").value;-->
+<!--      if(x=="&#45;&#45;select&#45;&#45;")-->
+<!--      {-->
+<!--          alert("must choose coordinator")-->
+<!--          return false-->
+<!--      }-->
+
+<!--  }-->
+
+<!--</script>-->
+{% endblock %}

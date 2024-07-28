@@ -1,0 +1,28 @@
+{% extends "counciltemp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped" id="ab">
+    <tr>
+      <th>SLNO</th>
+      <th>Date</th>
+      <th>Tribe Area</th>
+      <th>Title</th>
+      <th>Request</th>
+      <th>&nbsp;</th>
+    </tr>
+       {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{val[i][2]}}</td>
+      <td>{{val[i][3]}}</td>
+      <td>{{val[i][4]}}</td>
+      <td>{{val[i][5]}}</td>
+      <td><a href="{{url_for('allotservice',id=val[i][0])}}#about" class="btn btn-primary">allot</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

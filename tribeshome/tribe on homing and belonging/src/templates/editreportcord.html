@@ -1,0 +1,28 @@
+{% extends "cordtemp2.html"%}
+{% block body %}
+
+<body>
+<form action="/updatereportcord#about" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table width="200" class="table table-striped" id="ab">
+    <tr>
+      <th>Tribe Area </th>
+      <td><input type="text" name="textfield" value="{{val[3]}}" required/></td>
+    </tr>
+    <tr>
+      <th>Title</th>
+      <td><input type="text" name="textfield3" value="{{val[4]}}" required/></td>
+    </tr>
+    <tr>
+      <th>Report</th>
+      <td><a href="/changereportcord">
+        <input type="text" name="textfield3" value="{{val[5]}}" />
+      change report</a></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="Submit2" value="UPDATE" class="btn btn-primary" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

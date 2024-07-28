@@ -1,0 +1,29 @@
+{% extends "admin_temp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="688" class="table table-striped" id="ab">
+    <tr>
+      <th width="50">SLNO</th>
+      <th width="227">Name</th>
+      <th width="82">Date</th>
+      <th width="96">Tribe Area </th>
+      <th width="110">Title</th>
+      <th width="83">report</th>
+      <th width="83">&nbsp;</th>
+    </tr>
+      {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>&nbsp;{{val[i][0]}} {{val[i][1]}} ( {{val[i][2]}})</td>
+      <td>&nbsp;{{val[i][5]}}</td>
+      <td>&nbsp;{{val[i][6]}}</td>
+      <td>&nbsp;{{val[i][7]}}</td>
+      <td>{{val[i][8]}}</td>
+      <td><a href="../static/upload/{{val[i][8]}}" download  > {{val[i][8]}} </a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

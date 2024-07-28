@@ -1,0 +1,36 @@
+{% extends "cordtemp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="viewtrbeinfocord#about">
+  <table width="200" class="table table-striped">
+    <tr>
+      <td>SLNO</td>
+      <td>Member Name </td>
+      <td>Age</td>
+      <td>Gender</td>
+      <td>Relation with Head </td>
+      <td>Position</td>
+      <td>&nbsp;</td>
+      
+    </tr>
+    {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{val[i][2]}}</td>
+      <td>{{val[i][4]}}</td>
+      <td>{{val[i][3]}}</td>
+      <td>{{val[i][5]}}</td>
+      <td>{{val[i][6]}}</td>
+      <td><a href="{{url_for('editfamilydt',id=val[i][0])}}#about" class="btn btn-success">edit</a></td>
+    </tr>
+     {% endfor %}
+     <tr>
+       <td colspan="8"><div align="center">
+         <input type="submit" name="Submit" value="FINISH" class="btn btn-primary" />
+       </div></td>
+     </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

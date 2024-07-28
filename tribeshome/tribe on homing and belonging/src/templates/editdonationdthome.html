@@ -1,0 +1,29 @@
+{% extends "admin_temp2.html"%}
+{% block body %}
+
+<body>
+<style>
+
+.btn{
+      padding: 10px;
+    width: -webkit-fill-available;
+}
+</style>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped">
+    <tr>
+      <th scope="row"><a href="/viewclothdt#about" class="btn btn-primary">cloth</a></th>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/vieweducationdt#about" class="btn btn-primary">education material </a></th>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/viewfooddt#about" class="btn btn-primary">food</a></th>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/viewmedicinedt#about" class="btn btn-primary">medicine</a></th>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

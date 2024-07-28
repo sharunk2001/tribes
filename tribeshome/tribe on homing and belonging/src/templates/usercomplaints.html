@@ -1,0 +1,29 @@
+{% extends "admin_temp2.html"%}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="537" class="table table-striped">
+    <tr>
+      <td width="89">SLNO</td>
+      <td width="112">Name</td>
+      <td width="106">Date</td>
+      <td width="93">Complaint</td>
+      <td width="30">&nbsp;</td>
+    </tr>
+     {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{val[i][0]}} {{val[i][1]}} </td>
+      <td>{{val[i][4]}}</td>
+      <td>{{val[i][5]}}</td>
+      {% if val[i][6]=="pending" %}
+      <td><a href="{{url_for('replyuser',id=val[i][2])}}#about" class="btn btn-success">reply</a></td>
+      {% else %}
+      <td>{{val[i][7]}}</td>
+      {% endif %}
+    </tr>
+     {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

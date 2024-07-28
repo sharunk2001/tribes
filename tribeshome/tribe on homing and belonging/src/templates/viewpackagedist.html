@@ -1,0 +1,23 @@
+{% extends "district_home.html"%}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/packstat#about">
+  <table width="413" class="table table-striped" id="ab">
+    <tr>
+      <th width="96">SLNO</th>
+      <th width="17">Package Name </th>
+      <th width="17">Description</th>
+<!--      <td></td>-->
+    </tr>
+     {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{val[i][1]}}</td>
+      <td>{{val[i][2]}}</td>
+<!--      <td><a href="{{url_for('statdist',id=val[i][0])}}#about">forward</a></td>-->
+    </tr>
+    {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

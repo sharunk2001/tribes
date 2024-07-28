@@ -1,0 +1,42 @@
+{% extends "cordtemp2.html" %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped">
+    <tr>
+      <td>SLNO</td>
+      <td>Firstname</td>
+      <td>Lastname</td>
+      <td>DateOfBirth</td>
+      <td>Gender</td>
+      <td>Place</td>
+      <td>PostOffice</td>
+      <td>Pin</td>
+      <td>Phone Number </td>
+      <td>Email</td>
+      <td>Qualifications</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+     {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>&nbsp;{{val[i][2]}}</td>
+      <td>&nbsp;{{val[i][3]}}</td>
+      <td>&nbsp;{{val[i][4]}}</td>
+      <td>&nbsp;{{val[i][5]}}</td>
+      <td>&nbsp;{{val[i][6]}}</td>
+      <td>&nbsp;{{val[i][7]}}</td>
+      <td>&nbsp;{{val[i][8]}}</td>
+      <td>&nbsp;{{val[i][9]}}</td>
+      <td>&nbsp;{{val[i][10]}}</td>
+      <td>&nbsp;{{val[i][11]}}</td>
+      <td><a href="{{url_for('acceptvolun',id=val[i][1])}}#about" class="btn btn-success">Accept</a></td>
+      <td><a href="{{url_for('rejectvolun',id=val[i][1])}}#about" class="btn btn-danger">Reject</a></td>
+    </tr>
+     {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

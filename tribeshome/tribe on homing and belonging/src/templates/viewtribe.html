@@ -1,0 +1,30 @@
+{% extends "counciltemp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped" id="ab">
+    <tr>
+      <th>slno</th>
+      <th>Name</th>
+      <th>Area</td>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Position</th>
+      <th>&nbsp;</th>
+    </tr>
+     {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>{{val[i][3]}}</td>
+      <td>{{val[i][2]}}</td>
+      <td>{{val[i][4]}}</td>
+      <td>{{val[i][5]}}</td>
+      <td>{{val[i][6]}}</td>
+      <td><a href="{{url_for('viewfamilydt',id=val[i][0])}}#about" class="btn btn-primary">family members</a></td>
+    </tr>
+     {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

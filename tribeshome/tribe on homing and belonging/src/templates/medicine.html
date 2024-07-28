@@ -1,0 +1,51 @@
+{% extends "admin_temp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/addmedicinedt2#about">
+  <table width="291" class="table table-striped">
+    <tr>
+      <td width="173">Type</td>
+      <td width="102"><select name="select">
+
+	  <option value="Tablet">Tablet</option>
+	  <option value="Syrup">Syrup</option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td>Medicine Name </td>
+      <td><input type="text" name="textfield" required /></td>
+    </tr>
+    <tr>
+      <td>Dosage</td>
+      <td><input type="text" name="textfield2" required/></td>
+    </tr>
+    <tr>
+      <td>Quantity</td>
+      <td><input type="text" name="textfield3" required/></td>
+    </tr>
+    <tr>
+      <td>Expiry Date </td>
+      <td><input type="date" name="textfield4" required/></td>
+    </tr>
+    <tr>
+      <td>Donor Name </td>
+      <td><input type="text" name="textfield5" required/></td>
+    </tr>
+    <tr>
+      <td>Phone Number </td>
+      <td><input type="text" name="textfield6" required pattern="[6789][0-9]{9}"/></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="email" name="textfield7"required  /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td><input type="submit" name="Submit" value="ADD" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

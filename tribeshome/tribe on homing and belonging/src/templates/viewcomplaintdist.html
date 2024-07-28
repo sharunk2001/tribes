@@ -1,0 +1,27 @@
+{% extends "district_home.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped">
+    <tr>
+      <td>SLNO</td>
+      <td>Date</td>
+      <td>Complaints</td>
+      <td>reply</td>
+
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+       {% for i in range(0,val|length) %}
+    <tr>
+      <td>{{i+1}}</td>
+      <td>&nbsp;&nbsp;{{val[i][2]}}</td>
+      <td>&nbsp;&nbsp;{{val[i][3]}}</td>
+      <td> {{val[i][4]}}</td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

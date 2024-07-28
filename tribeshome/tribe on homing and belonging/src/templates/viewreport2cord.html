@@ -1,0 +1,35 @@
+{% extends "cordtemp2.html"%}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="/viewreportcordi2">
+  <div align="center">
+
+  </div>
+  <div align="center">
+    <table width="531" border="1" class="table table-striped">
+      <tr>
+        <td width="45">SLNO</td>
+        <td width="110">Name</td>
+        <td width="60">Date</td>
+        <td width="67">Tribe Area </td>
+        <td width="119">Title</td>
+        <td width="90">report</td>
+        <td></td>
+      </tr>
+      {% for i in range(0,val|length) %}
+      <tr>
+        <td>&nbsp;{{i+1}}</td>
+        <td>&nbsp;{{val[i][0]}} {{val[i][1]}} ( {{val[i][2]}})</td>
+        <td>&nbsp;{{val[i][5]}}</td>
+        <td>&nbsp;{{val[i][6]}}</td>
+        <td>&nbsp;{{val[i][7]}}</td>
+        <td>&nbsp;{{val[i][8]}}</td>
+        <td><a href="/static/upload/{{val[i][8]}}" download class="btn btn-primary">download</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  <p>&nbsp;</p>
+</form>
+</body>
+{% endblock %}

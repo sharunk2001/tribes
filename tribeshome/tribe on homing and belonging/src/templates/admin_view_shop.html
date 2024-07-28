@@ -1,0 +1,38 @@
+{% extends "admin_temp2.html"%}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" class="table table-striped" id="ab">
+    <tr>
+      <th>SLNO</th>
+      <th>Shop Name</th>
+      <th>Place</th>
+      <th>Post</th>
+      <th>&nbsp;Pin</th>
+      <th>contact</th>
+        <th>Licence Number</th>
+        <th>Owner Name</th>
+    </tr>
+       {% for i in val %}
+    <tr>
+      <td>{{loop.index}}</td>
+      <td>&nbsp;&nbsp;{{i[1]}}</td>
+      <td>&nbsp;&nbsp;{{i[2]}}</td>
+       <td>&nbsp;&nbsp;{{i[3]}}</td>
+       <td>&nbsp;&nbsp;{{i[4]}}</td>
+       <td>&nbsp;&nbsp;{{i[5]}}</td>
+       <td>&nbsp;&nbsp;{{i[7]}}</td>
+       <td>&nbsp;&nbsp;{{i[8]}}</td>
+      {% if i[10]=="pending" %}
+      <td><a href="{{url_for('approveshop',id=i[6])}}#about" class="btn btn-success">Accept</a></td>
+      <td><a href="{{url_for('rejectshop',id=i[6])}}#about" class="btn btn-danger">Reject</a></td>
+      {% else %}
+      <td colspan="2">{{val[10]}}</td>
+      {% endif %}
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}
